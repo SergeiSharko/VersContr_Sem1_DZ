@@ -17,8 +17,14 @@ for (int i = 0; i < array.Length; i++)
     if (array[i] >= 20 && array[i] <= 90) count++;
 }
 
-Console.WriteLine("Исходный массив:");
-Console.WriteLine(string join(" ", array));;
+Console.Write($"[");
+for (int i = 0; i < array.Length; i++)
+{
+    Console.Write($"{array[i]}");
+    if (i == array.Length - 1) break;
+    Console.Write($" ");
+}
+Console.Write($"]");
 
 if (count == 0)
     Console.Write($" => Нет элементов из отрезка [20,90]");
