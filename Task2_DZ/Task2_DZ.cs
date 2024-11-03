@@ -16,8 +16,14 @@ for (int i = 0; i < array.Length; i++)
     if (array[i] % 2 == 0) countEven++;
 }
 
-Console.WriteLine($"Исходный массив:");
-Console.WriteLine(string.Join(" ", array));
+Console.Write($"[");
+for (int i = 0; i < array.Length; i++)
+{
+    Console.Write($"{array[i]}");
+    if (i == array.Length - 1) break;
+    Console.Write($" ");
+}
+Console.Write($"]");
 
 if (countEven == 0)
     Console.Write($" => Четных элементов в массиве нет!");
