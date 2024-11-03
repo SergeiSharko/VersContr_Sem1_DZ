@@ -19,7 +19,13 @@ for (int i = 0; i < array.Length; i++)
     if (maxElement < array[i]) maxElement = array[i];
 }
 
-Console.WriteLine($"Исходный массив:");
-Console.WriteLine(string.Join(" ", array));
+Console.Write($"[");
+for (int i = 0; i < array.Length; i++)
+{
+    Console.Write($"{array[i]}");
+    if (i == array.Length - 1) break;
+    Console.Write($" ");
+}
+Console.Write($"]");
 
 Console.Write($" => {maxElement} - {minElement} = {maxElement - minElement}");
